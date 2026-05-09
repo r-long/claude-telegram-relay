@@ -1,0 +1,26 @@
+[Unit]
+Description=Claude Code Telegram Relay
+After=network.target
+
+[Service]
+Type=simple
+# UPDATE THIS: Your local Linux username
+User=YOUR_USERNAME
+# UPDATE THIS: Absolute path to this repo
+WorkingDirectory=/home/YOUR_USERNAME/path/to/claude-telegram-relay
+# UPDATE THIS: Absolute path to your bun binary
+ExecStart=/home/YOUR_USERNAME/.bun/bin/bun run src/relay.ts
+Restart=always
+RestartSec=10
+
+# Environment — adjust to match your shell PATH
+Environment=HOME=/home/YOUR_USERNAME
+Environment=PATH=/home/YOUR_USERNAME/.bun/bin:/usr/local/bin:/usr/bin:/bin
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=claude-relay
+
+[Install]
+WantedBy=multi-user.target

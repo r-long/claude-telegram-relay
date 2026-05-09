@@ -1,0 +1,53 @@
+# Environment
+.env
+.env.local
+
+# Secrets — anything in any .secrets/ folder, OAuth tokens, service accounts
+**/.secrets/
+*-oauth-*.json
+*-service-account*.json
+google-calendar-sa.json
+
+# Supabase CLI temp
+supabase/.temp/
+
+# Dependencies
+node_modules/
+
+# Bun
+bun.lockb
+
+# Personal config (keep examples, ignore actual)
+config/profile.md
+config/SOUL.md
+config/IDENTITY.md
+config/USER.md
+config/schedule.json
+config/channels.json
+config/memory/
+
+# Personal cron prompts (write your own — see cron/prompts/.example.md)
+cron/prompts/*.md
+!cron/prompts/example.md
+
+# User-specific service files (generated from daemon/ templates)
+daemon/claude-relay.service.local
+sessions.json
+
+# Runtime files
+*.lock
+!bun.lock
+*.log
+logs/
+temp/
+uploads/
+session.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp

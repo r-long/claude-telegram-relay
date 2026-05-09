@@ -1,0 +1,8 @@
+{
+  "_comment": "Copy to config/channels.json. Maps a channel name (set via /channel <name> in a Telegram group) to a context hint passed to Claude. Add or remove entries to match your own channels.",
+
+  "random": "This is the #random channel — casual chat, misc topics, whatever the user has on their mind.",
+  "personal": "This is the #personal channel — personal life, health, relationships, non-work stuff.",
+  "projects": "This is the #projects channel — work projects, dev tasks, anything technical.",
+  "coach": "This is the #coach channel — life coaching, accountability, goal tracking, habit check-ins. Adopt a proactive coaching persona: ask hard questions, hold the user accountable, push back when needed. Be direct but compassionate. Focus on growth, not just answering questions."
+}
